@@ -50,7 +50,7 @@ func ToInvoice(input *CreateInvoiceInput, accountID string) (*domain.Invoice, er
 		input.Amount,
 		input.Description,
 		input.PaymentType,
-		&card,
+		card,
 	)
 }
 

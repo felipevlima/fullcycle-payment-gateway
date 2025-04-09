@@ -35,7 +35,7 @@ type CreditCard struct {
 	CardholderName string
 }
 
-func NewInvoice(accountID string, amount float64, description string, paymentType string, card *CreditCard) (*Invoice, error) {
+func NewInvoice(accountID string, amount float64, description string, paymentType string, card CreditCard) (*Invoice, error) {
 	if amount <= 0 {
 		return nil, ErrInvalidAmount
 	}
